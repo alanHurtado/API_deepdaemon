@@ -1,13 +1,18 @@
 const mysql = require('mysql');
 
-const mysqlConnection = mysql.createConnection({
-    host : 'us-cdbr-east-05.cleardb.net',
-    user : 'b63b479c2bd710',
-    password : '1a256d73',
-    database : 'heroku_00e8da110b6cd01'
-});
+// const mysqlConnection = mysql.createConnection({
+//     host : 'localhost',
+//     user : 'root',
+//     password : 'KOALA@96',
+//     database : 'deepdaem_web_admin'
+// });
 
-/*BD EN HOSTING*/
+
+///BD HOSTING HEROKU
+
+const mysqlConnection = mysql.createConnection("mysql://bf89de34dbf2ae:7d61accb@us-cdbr-east-05.cleardb.net/heroku_d00365fbcf5102b?reconnect=true");
+
+/*BD EN HOSTING HOSPEDANDO*/
 
 // const mysqlConnection = mysql.createConnection({
 //     host : 'deepdaemon.org',

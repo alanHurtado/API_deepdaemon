@@ -1,14 +1,4 @@
 /* Pre ajustes */
-SET
-  SQL_MODE = "NO_AUTO_VALUE_ON_ZERO"; -- Afecta el auto_increment solo aumenta despues de un valor null
-
-SET
-  AUTOCOMMIT = 0; -- Deshabilita el modo de ejecución automatica
-
-START TRANSACTION;
-SET
-    time_zone = "+00:00";
-
 /* Creacion de Tablas */
 
 CREATE TABLE `career` (
