@@ -18,7 +18,7 @@ require('dotenv').config();
 const app = express(); //producto de express
 
 //Settings
-app.set('port', process.env.PORT || 4000)
+app.set('port', process.env.PORT || 4001)
 
 
 //Middlewares 
