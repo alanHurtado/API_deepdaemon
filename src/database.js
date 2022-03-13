@@ -18,11 +18,10 @@ const config = {
 };
 
 //prueba tabla en heroku
-// const config={
-//     "CLEARDB_DATABASE_URL":"mysql://bf89de34dbf2ae:7d61accb@us-cdbr-east-05.cleardb.net/heroku_d00365fbcf5102b?reconnect=true"
-// }
+//const config="mysql://bf89de34dbf2ae:7d61accb@us-cdbr-east-05.cleardb.net/heroku_d00365fbcf5102b?reconnect=true";
+
   
-const mysqlConnection = mysqlDriver.createConnection(config);
+var mysqlConnection = mysqlDriver.createConnection(config);
 
 // mysqlConnection.connect(function (err) {
 //     if(err) {
@@ -40,6 +39,7 @@ const mysqlConnection = mysqlDriver.createConnection(config);
 
 function handleDisconnect(conn) {
     console.log('Conexion exitosa a la BD');
+    
     conn.on('error', function(err) {
         if (!err.fatal) {      
               return;
